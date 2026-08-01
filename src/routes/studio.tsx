@@ -21,6 +21,7 @@ export const Route = createFileRoute("/studio")({
         title={<>Principles first. <span className="italic">Systems always.</span></>}
         lede="How we think about hospitality growth, and how a partnership with the studio unfolds — from first conversation to compound scale."
       />
+      <Vision />
       <Principles />
       <ClientExperience />
       <FinalCTA />

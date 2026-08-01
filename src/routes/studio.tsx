@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader, Principles, ClientExperience, FinalCTA, media } from "@/components/bk/shared";
+import { Vision } from "@/components/bk/vision-svgs";
 
 export const Route = createFileRoute("/studio")({
   head: () => ({
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/studio")({
         title={<>Principles first. <span className="italic">Systems always.</span></>}
         lede="How we think about hospitality growth, and how a partnership with the studio unfolds — from first conversation to compound scale."
       />
+      <Vision />
       <Principles />
       <ClientExperience />
       <FinalCTA />

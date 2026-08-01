@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, Hero, WhoWeHelp, Framework, FinalCTA, media } from "@/components/bk/shared";
+import { Vision } from "@/components/bk/vision-svgs";
 
 export const Route = createFileRoute("/")({
   head: () => ({

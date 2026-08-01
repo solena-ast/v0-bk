@@ -17,6 +17,7 @@ export const Route = createFileRoute("/")({
     <PageShell>
       <Hero />
       <WhoWeHelp />
+      <Vision />
       <Framework full={false} />
       <FinalCTA />
     </PageShell>

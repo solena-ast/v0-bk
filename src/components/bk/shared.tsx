@@ -10,6 +10,9 @@ import signalImgPointer from "@/assets/signal.png.asset.json";
 import moroccoImgPointer from "@/assets/morocco.jpg.asset.json";
 import interiorImgPointer from "@/assets/interior.jpg.asset.json";
 import dotsImgPointer from "@/assets/dots.png.asset.json";
+import coachNightPointer from "@/assets/coach-night.jpg.asset.json";
+import coachSunsetPointer from "@/assets/coach-sunset.jpg.asset.json";
+import coachPrevostPointer from "@/assets/coach-prevost.jpg.asset.json";
 import { assetUrl } from "@/lib/media";
 
 const portableAsset = <T extends { url: string }>(pointer: T): T => ({
@@ -26,10 +29,14 @@ const signalImg = portableAsset(signalImgPointer);
 const moroccoImg = portableAsset(moroccoImgPointer);
 const interiorImg = portableAsset(interiorImgPointer);
 const dotsImg = portableAsset(dotsImgPointer);
+const coachNightImg = portableAsset(coachNightPointer);
+const coachSunsetImg = portableAsset(coachSunsetPointer);
+const coachPrevostImg = portableAsset(coachPrevostPointer);
 
 export const media = {
   heroVideo, glassImg, timberImg, bronzeImg, gravityImg,
   signalImg, moroccoImg, interiorImg, dotsImg,
+  coachNightImg, coachSunsetImg, coachPrevostImg,
 };
 
 /* ============================================================

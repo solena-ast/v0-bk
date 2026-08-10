@@ -404,12 +404,12 @@ function Sparkline() {
       >
         <animate attributeName="stroke-dashoffset" values="240;0" dur="2s" fill="freeze" />
       </path>
-      <path d="M 14 100 L 36 92 L 58 96 L 80 78 L 102 66 L 124 52 L 148 34 L 148 124 L 14 124 Z" fill={BRONZE} opacity="0.08" />
+      <path d="M 14 100 L 36 92 L 58 96 L 80 78 L 102 66 L 124 52 L 148 34 L 148 106 L 14 106 Z" fill={BRONZE} opacity="0.08" />
       <circle cx="148" cy="34" r="3.2" fill={BRONZE} className="pulse-dot" />
-      <Mono x={14} y={118} size={7.5}>
+      <Mono x={14} y={124} size={7.5}>
         REVENUE / DIRECT
       </Mono>
-      <Mono x={14} y={134} size={6.5} opacity={0.65}>
+      <Mono x={14} y={138} size={6.5} opacity={0.65}>
         +41% YOY · 12 MO
       </Mono>
     </Frame>

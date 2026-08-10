@@ -1,4 +1,5 @@
 import glassImg from "@/assets/glass.jpg.asset.json";
+import coachNightImg from "@/assets/coach-night.jpg.asset.json";
 import timberImg from "@/assets/timber.jpg.asset.json";
 import bronzeImg from "@/assets/bronze.jpg.asset.json";
 import moroccoImg from "@/assets/morocco.jpg.asset.json";
@@ -241,6 +242,50 @@ export const industries: Industry[] = [
         { name: "Waitlist walk-ins", a: "412",  b: "$154 ATV", c: "$63k"  },
         { name: "Members",           a: "168",  b: "$248 ATV", c: "$41k"  },
         { name: "Private events",    a: "58",   b: "$3,900 avg", c: "$226k" },
+      ],
+    },
+  },
+  {
+    slug: "coach-transport",
+    chapter: "Chapter 16",
+    name: "Coach & Transport Operators",
+    tagline: "Every seat sold, every route earning.",
+    hero: assetUrl(coachNightImg),
+    philosophy:
+      "A coach line is hospitality in motion. The seat is the room, the route is the itinerary, and the driver is the concierge. We build the same owned-demand spine we build for hotels — direct ticketing, route-level storytelling, and a rider record that returns — so you stop renting demand from aggregators and charter brokers.",
+    useCase: {
+      title: "A 22-coach fleet at 61% load factor, half its seats sold by brokers",
+      body: "Your fleet is immaculate and your margin is not. We rebuild direct ticketing, put charter enquiries into a real pipeline, and turn each route into a story travellers choose deliberately — lifting load factor without cutting fares.",
+    },
+    pipeline: [
+      { step: "01", label: "Fleet & route audit", body: "Load factor by route and departure, broker dependency, charter mix, fare integrity." },
+      { step: "02", label: "Direct ticketing engine", body: "A conversion-tuned booking flow with seat selection, live inventory and wallet-ready tickets." },
+      { step: "03", label: "Route editorial system", body: "Route films, on-board interiors, driver and destination stories — built for organic discovery." },
+      { step: "04", label: "Charter & group pipeline", body: "Enquiry scoring, instant quoting, corporate and tour-operator portals." },
+      { step: "05", label: "Rider loyalty loop", body: "Passes, commuter tiers, and SMS re-booking that make the second trip automatic." },
+    ],
+    deliverables: [
+      "Direct ticketing site + seat map",
+      "Route-level editorial library",
+      "Charter quoting + CRM pipeline",
+      "Rider loyalty & pass program",
+      "Fleet utilisation dashboard",
+      "Broker reduction roadmap",
+    ],
+    dashboard: {
+      label: "Fleet Operations Console",
+      kpi: "Load factor × direct share",
+      stats: [
+        { label: "Load factor", value: "84%", delta: "+23 pts" },
+        { label: "Direct share", value: "58%", delta: "+31 pts" },
+        { label: "Avg fare", value: "$74", delta: "+12%" },
+        { label: "Repeat riders", value: "37%", delta: "+15 pts" },
+      ],
+      rows: [
+        { name: "Direct ticketing", a: "18,420 seats", b: "$78 fare", c: "$1.44M" },
+        { name: "Charter & groups", a: "312 charters", b: "$2,640 avg", c: "$824k" },
+        { name: "Broker / OTA",     a: "9,110 seats",  b: "$66 fare", c: "$601k" },
+        { name: "Commuter passes",  a: "1,240 passes", b: "$210 avg", c: "$260k" },
       ],
     },
   },

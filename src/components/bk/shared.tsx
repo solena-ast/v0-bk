@@ -10,6 +10,9 @@ import signalImgPointer from "@/assets/signal.png.asset.json";
 import moroccoImgPointer from "@/assets/morocco.jpg.asset.json";
 import interiorImgPointer from "@/assets/interior.jpg.asset.json";
 import dotsImgPointer from "@/assets/dots.png.asset.json";
+import coachNightPointer from "@/assets/coach-night.jpg.asset.json";
+import coachSunsetPointer from "@/assets/coach-sunset.jpg.asset.json";
+import coachPrevostPointer from "@/assets/coach-prevost.jpg.asset.json";
 import { assetUrl } from "@/lib/media";
 
 const portableAsset = <T extends { url: string }>(pointer: T): T => ({
@@ -26,10 +29,14 @@ const signalImg = portableAsset(signalImgPointer);
 const moroccoImg = portableAsset(moroccoImgPointer);
 const interiorImg = portableAsset(interiorImgPointer);
 const dotsImg = portableAsset(dotsImgPointer);
+const coachNightImg = portableAsset(coachNightPointer);
+const coachSunsetImg = portableAsset(coachSunsetPointer);
+const coachPrevostImg = portableAsset(coachPrevostPointer);
 
 export const media = {
   heroVideo, glassImg, timberImg, bronzeImg, gravityImg,
   signalImg, moroccoImg, interiorImg, dotsImg,
+  coachNightImg, coachSunsetImg, coachPrevostImg,
 };
 
 /* ============================================================
@@ -421,6 +428,8 @@ export function WhoWeHelp() {
     { t: "Tour Operators", d: "Curated experiences and destination brands.", img: moroccoImg.url },
     { t: "Real Estate", d: "Branded residences and rental properties.", img: glassImg.url },
     { t: "Hospitality Startups", d: "New concepts building their first system.", img: bronzeImg.url },
+    { t: "Coach & Transport", d: "Fleet operators, charter lines and intercity coaches.", img: coachNightImg.url },
+    { t: "Luxury Motorcoaches", d: "Private coach charters and touring fleets.", img: coachPrevostImg.url },
   ];
   return (
     <section className="max-w-editorial container-x py-24 md:py-40">

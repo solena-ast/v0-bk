@@ -428,6 +428,8 @@ export function WhoWeHelp() {
     { t: "Tour Operators", d: "Curated experiences and destination brands.", img: moroccoImg.url },
     { t: "Real Estate", d: "Branded residences and rental properties.", img: glassImg.url },
     { t: "Hospitality Startups", d: "New concepts building their first system.", img: bronzeImg.url },
+    { t: "Coach & Transport", d: "Fleet operators, charter lines and intercity coaches.", img: coachNightImg.url },
+    { t: "Luxury Motorcoaches", d: "Private coach charters and touring fleets.", img: coachPrevostImg.url },
   ];
   return (
     <section className="max-w-editorial container-x py-24 md:py-40">

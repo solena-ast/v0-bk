@@ -146,10 +146,28 @@ function IndustryPage() {
             <div className="grid grid-cols-12 gap-8">
               <div className="col-span-12 lg:col-span-7">
                 <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mb-3">{ind.dashboard.kpi}</div>
-                <MockChart />
+                <AreaChart points={charts.trend.points} labels={charts.trend.labels} caption={charts.trend.caption} />
+                <div className="mt-6 grid grid-cols-2 gap-6">
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mb-2">Direct share</div>
+                    <DonutChart pct={charts.donut.pct} caption={charts.donut.caption} />
+                  </div>
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mb-2">{charts.gauge.label}</div>
+                    <GaugeChart pct={charts.gauge.pct} caption={charts.gauge.caption} />
+                  </div>
+                </div>
               </div>
               <div className="col-span-12 lg:col-span-5">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mb-3">Channels</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mb-3">Channel contribution</div>
+                <BarRows rows={charts.bars} />
+                {charts.funnel && (
+                  <>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mt-6 mb-3">Pipeline</div>
+                    <FunnelChart stages={charts.funnel} />
+                  </>
+                )}
+                <div className="font-mono text-[10px] uppercase tracking-widest text-espresso/70 mt-6 mb-3">Channels</div>
                 <div className="divide-y hairline border hairline rounded-md">
                   {ind.dashboard.rows.map((r) => (
                     <div key={r.name} className="grid grid-cols-4 gap-2 px-4 py-3 items-center">

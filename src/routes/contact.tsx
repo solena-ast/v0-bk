@@ -5,6 +5,7 @@ import { PageShell, PageHeader, Eyebrow, media } from "@/components/bk/shared";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { industries } from "@/lib/industries";
+import { GaugeChart } from "@/components/bk/charts";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

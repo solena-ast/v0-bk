@@ -36,6 +36,7 @@ export const Route = createFileRoute("/industries/$slug")({
 
 function IndustryPage() {
   const { ind } = Route.useLoaderData() as { ind: Industry };
+  const charts = chartsFor(ind);
   return (
     <PageShell>
       {/* Hero */}

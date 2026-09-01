@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageShell, Eyebrow } from "@/components/bk/shared";
 import { industries, industryBySlug } from "@/lib/industries";
 import { assetUrl } from "@/lib/media";
+import { ConsoleCharts_ } from "@/components/bk/charts";
+import { chartsFor } from "@/lib/console-charts";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/onboarding")({

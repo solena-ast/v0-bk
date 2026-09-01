@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageShell, Eyebrow } from "@/components/bk/shared";
 import { industries } from "@/lib/industries";
+import { ConsoleCharts_ } from "@/components/bk/charts";
+import { chartsFor } from "@/lib/console-charts";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({ meta: [{ title: "Dashboard — BK Studio" }, { name: "robots", content: "noindex" }] }),
@@ -84,6 +86,9 @@ function Dashboard() {
                   {s.delta && <div className="font-mono text-[11px] text-bronze mt-0.5">{s.delta}</div>}
                 </div>
               ))}
+            </div>
+            <div className="mt-8">
+              <ConsoleCharts_ charts={chartsFor(industry)} />
             </div>
           </div>
         ) : (

@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageShell, Eyebrow } from "@/components/bk/shared";
 import { industries, industryBySlug } from "@/lib/industries";
 import { assetUrl } from "@/lib/media";
+import { ConsoleCharts_ } from "@/components/bk/charts";
+import { chartsFor } from "@/lib/console-charts";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/onboarding")({
@@ -192,6 +194,11 @@ function Onboarding() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-6">
+                  <ConsoleCharts_ charts={chartsFor(chosen)} />
+                </div>
+
                 <div className="mt-6 rounded-md overflow-hidden border hairline">
                   {chosen.dashboard.rows.map((r) => (
                     <div key={r.name} className="grid grid-cols-4 px-3 py-2 text-[13px] border-b hairline last:border-b-0">

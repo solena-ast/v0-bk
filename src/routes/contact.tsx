@@ -5,6 +5,7 @@ import { PageShell, PageHeader, Eyebrow, media } from "@/components/bk/shared";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { industries } from "@/lib/industries";
+import { GaugeChart } from "@/components/bk/charts";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -99,12 +100,16 @@ function ContactPage() {
               <a href="mailto:studio@bk.studio" className="font-serif text-2xl md:text-3xl text-cocoa mt-3 block break-words">studio@bk.studio</a>
             </div>
             <div>
-              <Eyebrow num="B">Offices</Eyebrow>
-              <p className="text-espresso text-[15px] leading-[1.7] mt-3">Lisbon · Marrakech · London.<br/>Partners globally.</p>
+              <Eyebrow num="B">Studio</Eyebrow>
+              <p className="text-espresso text-[15px] leading-[1.7] mt-3">Sebuleni Center, Riara Road,<br/>Nairobi, Kenya.<br/>Partners globally.</p>
             </div>
             <div>
               <Eyebrow num="C">Availability</Eyebrow>
               <p className="text-espresso text-[15px] leading-[1.7] mt-3">Taking on three new partners for Q1.</p>
+              <div className="mt-4 border hairline rounded-md p-4 bg-[var(--linen-2)]">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-espresso/75">Partner slots filled</span>
+                <div className="mt-3"><GaugeChart pct={70} caption="7 OF 10 · Q1 COHORT" /></div>
+              </div>
             </div>
           </aside>
         </div>

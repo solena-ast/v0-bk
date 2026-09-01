@@ -105,6 +105,10 @@ function ContactPage() {
             <div>
               <Eyebrow num="C">Availability</Eyebrow>
               <p className="text-espresso text-[15px] leading-[1.7] mt-3">Taking on three new partners for Q1.</p>
+              <div className="mt-4 border hairline rounded-md p-4 bg-[var(--linen-2)]">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-espresso/75">Partner slots filled</span>
+                <div className="mt-3"><GaugeChart pct={70} caption="7 OF 10 · Q1 COHORT" /></div>
+              </div>
             </div>
           </aside>
         </div>

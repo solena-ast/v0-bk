@@ -276,10 +276,10 @@ export const industries: Industry[] = [
       label: "Fleet Operations Console",
       kpi: "Load factor × direct share",
       stats: [
-        { label: "Load factor", value: "84%", delta: "+23 pts" },
-        { label: "Direct share", value: "58%", delta: "+31 pts" },
-        { label: "Avg fare", value: "$74", delta: "+12%" },
-        { label: "Repeat riders", value: "37%", delta: "+15 pts" },
+        { label: "Direct bookings", value: "18,420", delta: "+38%" },
+        { label: "Route conversion", value: "6.4%", delta: "+2.7 pts" },
+        { label: "Charter pipeline", value: "$1.2M", delta: "312 confirmed" },
+        { label: "Fleet utilisation", value: "84%", delta: "+23 pts" },
       ],
       rows: [
         { name: "Direct ticketing", a: "18,420 seats", b: "$78 fare", c: "$1.44M" },

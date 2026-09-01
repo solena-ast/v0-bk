@@ -99,8 +99,8 @@ function ContactPage() {
               <a href="mailto:studio@bk.studio" className="font-serif text-2xl md:text-3xl text-cocoa mt-3 block break-words">studio@bk.studio</a>
             </div>
             <div>
-              <Eyebrow num="B">Offices</Eyebrow>
-              <p className="text-espresso text-[15px] leading-[1.7] mt-3">Lisbon · Marrakech · London.<br/>Partners globally.</p>
+              <Eyebrow num="B">Studio</Eyebrow>
+              <p className="text-espresso text-[15px] leading-[1.7] mt-3">Sebuleni Center, Riara Road,<br/>Nairobi, Kenya.<br/>Partners globally.</p>
             </div>
             <div>
               <Eyebrow num="C">Availability</Eyebrow>

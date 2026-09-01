@@ -1,6 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell, Eyebrow, FinalCTA } from "@/components/bk/shared";
 import { industryBySlug, industries, type Industry } from "@/lib/industries";
+import { AreaChart, BarRows, DonutChart, FunnelChart, GaugeChart } from "@/components/bk/charts";
+import { chartsFor } from "@/lib/console-charts";
 
 
 export const Route = createFileRoute("/industries/$slug")({

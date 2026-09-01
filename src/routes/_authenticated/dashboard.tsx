@@ -85,6 +85,9 @@ function Dashboard() {
                 </div>
               ))}
             </div>
+            <div className="mt-8">
+              <ConsoleCharts_ charts={chartsFor(industry)} />
+            </div>
           </div>
         ) : (
           Object.entries(grouped).map(([cat, list]) => (

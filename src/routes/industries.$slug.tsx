@@ -203,33 +203,3 @@ function IndustryPage() {
     </PageShell>
   );
 }
-
-function MockChart() {
-  const pts = [8, 14, 12, 22, 28, 24, 34, 41, 38, 46, 52, 58];
-  const max = 64;
-  const W = 520, H = 180;
-  const path = pts.map((v, i) => {
-    const x = (i / (pts.length - 1)) * W;
-    const y = H - (v / max) * H;
-    return `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(" ");
-  const area = `${path} L${W},${H} L0,${H} Z`;
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-40">
-      <defs>
-        <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="var(--bronze)" stopOpacity="0.35" />
-          <stop offset="1" stopColor="var(--bronze)" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      {[0.25, 0.5, 0.75].map(f => <line key={f} x1="0" x2={W} y1={H*f} y2={H*f} stroke="var(--hairline)" />)}
-      <path d={area} fill="url(#g)" />
-      <path d={path} fill="none" stroke="var(--cocoa)" strokeWidth="1.5" />
-      {pts.map((v, i) => {
-        const x = (i / (pts.length - 1)) * W;
-        const y = H - (v / max) * H;
-        return <circle key={i} cx={x} cy={y} r="2.5" fill="var(--cocoa)" />;
-      })}
-    </svg>
-  );
-}

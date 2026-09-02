@@ -36,7 +36,7 @@ function Panel({ n, title, note, children }: { n: string; title: string; note?: 
         <span className="divider-num">{n}</span>
         {note && <span className="font-mono text-[10px] text-bronze uppercase tracking-widest">{note}</span>}
       </div>
-      <div className="mt-5">{children}</div>
+      <div className="mt-5 min-h-[150px] flex items-center">{children}</div>
       <p className="font-serif text-lg text-cocoa mt-4">{title}</p>
     </div>
   );

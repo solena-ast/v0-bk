@@ -129,19 +129,20 @@ export function GaugeChart({ pct, label, caption }: { pct: number; label?: strin
 
 /** Pipeline funnel — stages narrowing toward closed value. */
 export function FunnelChart({ stages }: { stages: { label: string; value: string; pct: number }[] }) {
-  const w = 300;
+  const w = 600;
   return (
-    <svg viewBox={`0 0 ${w} ${stages.length * 30 + 10}`} role="img" aria-label="pipeline funnel" className="w-full h-auto">
+    <svg viewBox={`0 0 ${w} ${stages.length * 46 + 12}`} role="img" aria-label="pipeline funnel" className="w-full h-auto">
       {stages.map((s, i) => {
-        const y = 8 + i * 30;
-        const bw = (s.pct / 100) * 220;
+        const y = 8 + i * 46;
+        const bw = Math.max(180, (s.pct / 100) * 460);
         const x = (w - bw) / 2;
         return (
           <g key={s.label}>
-            <rect x={x} y={y} width={bw} height="20" rx="2" fill={i === stages.length - 1 ? BRONZE : COCOA} opacity={0.14 + i * 0.14}>
+            <rect x={x} y={y} width={bw} height="34" rx="3" fill={i === stages.length - 1 ? BRONZE : COCOA} opacity={0.12 + i * 0.1}>
               <animate attributeName="width" values={`0;${bw}`} dur="1s" begin={`${i * 0.1}s`} fill="freeze" />
+              <animate attributeName="x" values={`${w / 2};${x}`} dur="1s" begin={`${i * 0.1}s`} fill="freeze" />
             </rect>
-            <Mono x={w / 2} y={y + 14} anchor="middle" size={8} fill={COCOA}>{`${s.label} · ${s.value}`}</Mono>
+            <Mono x={w / 2} y={y + 22} anchor="middle" size={11} fill={COCOA}>{`${s.label.toUpperCase()} · ${s.value}`}</Mono>
           </g>
         );
       })}

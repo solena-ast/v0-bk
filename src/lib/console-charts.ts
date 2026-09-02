@@ -10,7 +10,7 @@ const pctOf = (v?: string) => {
 
 /** Transport-specific console: direct bookings, route conversion, charter pipeline, fleet utilisation. */
 export const transportCharts: ConsoleCharts = {
-  donut: { pct: 58, caption: "DIRECT TICKETING SHARE · vs. 27% at intake" },
+  donut: { pct: 58, caption: "TICKETING · VS 27% AT INTAKE" },
   gauge: { pct: 84, label: "FLEET UTILISATION", caption: "22 COACHES · +23 PTS" },
   trend: {
     points: [1180, 1240, 1390, 1420, 1610, 1780, 1944],
@@ -55,7 +55,7 @@ export function chartsFor(industry: Industry): ConsoleCharts {
   }));
 
   return {
-    donut: { pct: donutPct, caption: `${industry.dashboard.kpi.toUpperCase()}` },
+    donut: { pct: donutPct, caption: industry.dashboard.kpi.toUpperCase().slice(0, 26) },
     gauge: {
       pct: pctOf(gaugeStat?.value) ?? 72,
       label: (gaugeStat?.label ?? "Occupancy").toUpperCase(),

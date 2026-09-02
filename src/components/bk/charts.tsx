@@ -51,7 +51,7 @@ export function DonutChart({ pct, center, caption }: { pct: number; center?: str
       <text x="80" y="68" textAnchor="middle" fontFamily="var(--font-serif)" fontSize="26" fill={COCOA}>
         {center ?? `${pct}%`}
       </text>
-      {caption && <Mono x={80} y={118} anchor="middle" size={7} opacity={0.7}>{caption}</Mono>}
+      {caption && <Mono x={80} y={118} anchor="middle" size={6.5} opacity={0.7}>{caption}</Mono>}
     </svg>
   );
 }
